@@ -9,6 +9,11 @@ git clone https://github.com/kennedy-f/pokedex-workspace.git --recuse-submodules
 docker-compose up 
 ```
 
+## The ports 
+Api - 3000
+Client - 80 
+Database - 5432
+
 ## How to populate the database
 Do a GET in the ``http://localhost:3000/import`` 
 
