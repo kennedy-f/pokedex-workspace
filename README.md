@@ -6,7 +6,15 @@
 git clone https://github.com/kennedy-f/pokedex-workspace.git --recuse-submodules
 ```
 ## How to run 
-```typescript jsx
+```
+cd poke-api 
+yarn 
+cd .. 
+cd poke-client 
+yarn 
+```
+
+```bash
 docker-compose up 
 ```
 
