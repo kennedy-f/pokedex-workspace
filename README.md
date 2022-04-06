@@ -6,16 +6,24 @@
 git clone https://github.com/kennedy-f/pokedex-workspace.git --recuse-submodules
 ```
 ## How to run 
-```
+```bash
 cd poke-api 
 yarn 
 cd .. 
 cd poke-client 
 yarn 
-```
-
-```bash
+cd ..
 docker-compose up 
+```
+or 
+```bash
+cd poke-api 
+npm install
+cd .. 
+cd poke-client 
+npm install 
+cd ..
+docker-compose up
 ```
 
 ## The ports 
