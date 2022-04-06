@@ -12,6 +12,8 @@ services:
       POSTGRES_USER: poke-dev
       POSTGRES_PASSWORD: dev
       POSTGRES_DB: poke-database
+    networks:
+      - base
 
   poke-api:
     container_name: poke-api
