@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "formik": "^2.2.9",
+    "react-intersection-observer": "^8.33.1",
+    "react-toastify": "^8.2.0",
+    "yup": "^0.32.11"
+  }
+}

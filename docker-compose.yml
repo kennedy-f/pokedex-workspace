@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  poke-db:
+    container_name: poke-database
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_HOST: poke-postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: poke-dev
+      POSTGRES_PASSWORD: dev
+      POSTGRES_DB: poke-database
+
+  poke-api:
+    container_name: poke-api
+    image: node:16-alpine
+    command: yarn start:dev
+    depends_on:
+      - poke-db
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    volumes:
+      - ./poke-api:/app
+    networks:
+      - base
+
+  poke-client:
+    container_name: poke-client
+    image: node:16-alpine
+    command: yarn start
+    ports:
+      - "80:3000"
+    working_dir: /app
+    volumes:
+      - ./poke-client:/app
+
+networks:
+  base:
